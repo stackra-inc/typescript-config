@@ -1,0 +1,47 @@
+# =============================================================================
+# CI — @stackra/typescript-config
+#
+# Runs on every push to main/develop and on pull requests targeting those
+# branches.
+#
+# Job graph:
+#   build ──► format
+# =============================================================================
+
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  build:
+    name: � Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup
+      - run: pnpm build
+      - uses: actions/upload-artifact@v6
+        with:
+          name: dist-${{ github.sha }}
+          path: dist/
+          retention-days: 3
+
+  format:
+    name: 🎨 Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup
+      - run: pnpm format:check
