@@ -85,10 +85,20 @@
   },
   "stackra": {
     "publish": {
+      "config": {
+        "source": "config/",
+        "destination": "src/config/",
+        "description": "TypeScript configuration presets"
+      },
       "steering": {
         "source": ".kiro/steering/",
         "destination": ".kiro/steering/{module}/",
-        "description": "Kiro AI steering files"
+        "description": "Kiro AI steering files for TypeScript configuration"
+      },
+      "hooks": {
+        "source": ".kiro/hooks/",
+        "destination": ".kiro/hooks/",
+        "description": "Kiro hooks"
       }
     }
   }
