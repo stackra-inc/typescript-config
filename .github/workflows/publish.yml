@@ -172,7 +172,7 @@ jobs:
           echo "See [CHANGELOG](https://github.com/stackra-inc/typescript-config/blob/main/CHANGELOG.md) for full details." >> release_body.md
 
       - name: 🎉 Create Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ needs.validate.outputs.tag }}
           name: "${{ needs.validate.outputs.tag }}"
