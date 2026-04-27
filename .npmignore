@@ -9,7 +9,7 @@ __tests__/
 *.config.cjs
 *.config.mjs
 *.config.ts
-jest.config.*
+vitest.config.*
 tsconfig.json
 tsconfig.*.json
 .vscode/

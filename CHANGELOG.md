@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Migrated from `@nesvel` to `@stackra` scope
+- Migrated from `@stackra` to `@stackra` scope
 - Updated repository URLs to GitHub (stackra-inc)
 
 ## 0.1.0
