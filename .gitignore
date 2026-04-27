@@ -10,13 +10,3 @@ Thumbs.db
 coverage/
 *.log
 npm-debug.log*
-
-# Build output — preset JSON files copied to root by `pnpm build`
-/base.json
-/bundler.json
-/next.json
-/react-lib.json
-/nest-lib.json
-/nest-app.json
-/react-native-app.json
-/react-native-lib.json

@@ -95,18 +95,8 @@ jobs:
       - uses: actions/checkout@v5
       - uses: ./.github/actions/setup
 
-      - name: Build
-        run: pnpm build
-
       - name: 🎨 Format check
         run: pnpm format:check
-
-      - name: 📤 Upload dist artifact
-        uses: actions/upload-artifact@v6
-        with:
-          name: dist-publish-${{ github.sha }}
-          path: dist/
-          retention-days: 7
 
   # ---------------------------------------------------------------------------
   # Publish to npm
@@ -127,12 +117,6 @@ jobs:
       - uses: ./.github/actions/setup
         with:
           node-version: "22"
-
-      - name: 📥 Download dist artifact
-        uses: actions/download-artifact@v6
-        with:
-          name: dist-publish-${{ github.sha }}
-          path: dist/
 
       - name: 🔧 Configure npm registry
         uses: actions/setup-node@v5
