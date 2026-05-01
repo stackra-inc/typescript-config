@@ -97,7 +97,7 @@ package. Every item must pass before a package is considered production-ready.
 
 ### tsconfig.json
 
-- [ ] Extends `@stackra/typescript-config/base.json` (libraries) or
+- [ ] Extends `@stackra/typescript-config/base` (libraries) or
       `/bundler.json` (config packages)
 - [ ] `outDir` and `rootDir` set locally (not in preset)
 - [ ] `paths: { "@/*": ["./src/*"] }` for path alias
