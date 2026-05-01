@@ -1,6 +1,6 @@
 {
   "name": "@stackra/typescript-config",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Shared TypeScript configuration presets for Stackra packages",
   "private": false,
   "license": "MIT",
