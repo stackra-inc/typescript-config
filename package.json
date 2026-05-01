@@ -58,6 +58,10 @@
     "@commitlint/cli": "^20.5.2",
     "@commitlint/config-conventional": "^20.5.0",
     "@commitlint/types": "^20.5.0",
+    "@stackra/eslint-config": "^1.0.11",
+    "@stackra/prettier-config": "^1.0.9",
+    "@stackra/standardize": "^1.0.2",
+    "eslint": "^10.2.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "prettier": "^3.8.3",
@@ -72,7 +76,7 @@
   },
   "engines": {
     "node": ">=22",
-    "pnpm": ">=10"
+    "pnpm": ">=9.0.0"
   },
   "sideEffects": false,
   "packageManager": "pnpm@10.33.2",
@@ -93,6 +97,12 @@
         "destination": ".kiro/hooks/",
         "description": "Kiro hooks"
       }
+    }
+  },
+  "pnpm": {
+    "overrides": {
+      "eslint": "^9.28.0",
+      "vite": "^7.2.6"
     }
   }
 }
